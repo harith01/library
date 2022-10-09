@@ -13,7 +13,7 @@ function addBookToLibrary(){
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
     let pages = document.getElementById('pages').value;
-    let read = document.getElementById('read');
+    let read = document.getElementById('read').value;
     if (title == '' || author == '' || pages == '' || read == ''){
         alert('Provide full information');
         return;
