@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+<body>
+    <header>
+        <div class="header-items">
+            <h1>My Library</h1>
+            <button class="button" id="addBook" type="button">Add a Book</button>
+        </div>
+    </header>
+    <div class="books">
+        <div class="book">
+            <h2>Title: My Book</h2>
+            <p>Author: Me</p>
+            <p>Pages: 345</p>
+            <p>Read: Yes</p>
+        </div>
+    </div>
+    <div class="form-entry">
+        <form>
+            <div class="form-control">
+                <label for="title">Book Title:</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="form-control">
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author">
+            </div>
+            <div class="form-control">
+                <label for="pages">Pages:</label>
+                <input type="number" name="pages" id="pages">
+            </div>
+            <div class="form-control">
+                <label for="read">Read:</label>
+                <input type="text" name="read" id="read">
+            </div>
+            <div class="form-control">
+                <button type="button" id="submitBook">Submit Book</button>
+            </div>
+        </form>
+        <img class="close" id="icon" src="img/close.svg">
+    </div>
+</body>
+</html>
