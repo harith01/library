@@ -63,7 +63,9 @@ function displayBook(aBook, i) {
   }
   // create delete-icon
   const deleteBook = document.createElement("div");
-  deleteBook.innerHTML = `<i class="fa fa-trash delete-book" aria-hidden="true"></i>`;
+  deleteBook.setAttribute = ("class", "del-read");
+  deleteBook.innerHTML = `<i class="fa fa-trash delete-book" aria-hidden="true"></i>
+  <i class="fa fa-check" aria-hidden="true"></i>`;
   book.appendChild(deleteBook);
   books.appendChild(book);
 }
@@ -91,7 +93,9 @@ addBook.addEventListener("click", () => {
 });
 
 let submitBook = document.getElementById("submitBook");
-submitBook.addEventListener("click", addBookToLibrary);
+submitBook.addEventListener("click", () => {
+    addBookToLibrary();
+    reset_form()});
 
 let close = document.querySelector(".close");
 close.addEventListener(
@@ -108,3 +112,10 @@ document.querySelector(".books").addEventListener("click", (e) => {
     myLibrary.splice(index, 1);
   }
 });
+
+function reset_form(){
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
+    document.getElementById('pages').value = '';
+    document.getElementById('read').value = '';
+}
